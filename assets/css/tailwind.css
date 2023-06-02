@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* По хорошему это стоило бы сделать в конфиге тейлвинда... */
+@layer components {
+  .inter {
+    font-family: "Inter", sans-serif;
+  }
+}
