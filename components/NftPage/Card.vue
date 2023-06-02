@@ -24,6 +24,6 @@ const { card } = defineProps(["card"]);
 function handleImageError(evt) {
   console.log("Error");
   evt.target.src =
-    "https://img.freepik.com/free-vector/oops-404-error-with-a-broken-robot-concept-illustration_114360-1920.jpg?w=2000"; 
+    "https://img.freepik.com/free-vector/oops-404-error-with-a-broken-robot-concept-illustration_114360-1920.jpg?w=2000";
 }
 </script>

@@ -16,7 +16,7 @@ export default defineEventHandler(async () => [
   {
     id: 24,
     imageUrl:
-      "https://d2cnuwplk0vy10.cloudfront.net/nft-image/angel-doggos@kadena/24",
+      "https://d2cnuwplk0vy10.cloudfront.net/nft-image/angel-doggos@kadena132/24",
     infoUrl:
       "https://mintit.studio/collections/the-angel-doggos/tokens/Z9JQw5u1ZTEf5MBR7rsL9EkW8PcZgg3AJCXxF1Fg3_E",
   },

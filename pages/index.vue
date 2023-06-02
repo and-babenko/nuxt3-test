@@ -1,6 +1,7 @@
 <template>
   <main class="relative">
     <div>
+      <!-- Эффекты. Либо так, явно, либо пытаться привязаться к каким-то элементам и попробовать подобавлять им псевдоэлемнеты. Однако тогда не будет какого-то одного места, где их просто найти и подправить. Лишние блоки на странице или хаотичность в коде? Пока оставлю так.  -->
       <div class="lamp bg-[#0d37a4] top-[-400px] left-[-400px]"></div>
       <div class="lamp bg-[#ec967a40] bottom-[-250px] left-[-300px]"></div>
       <div class="lamp bg-[#ff009940] top-[-350px] right-[200px]"></div>
@@ -16,6 +17,13 @@
       <section
         class="px-6 pt-6 pb-8 grid gap-6 nftPageLayout justify-items-center"
       >
+        <div
+          v-if="!cardsList.length"
+          class="max-w-[200px] inter text-sm text-white font-medium"
+        >
+          Card list is empty
+        </div>
+
         <NftPageCard
           class="max-w-[200px]"
           v-for="(card, index) in cardsList"
@@ -100,8 +108,8 @@ watch(selectedCardIndex, () => {
 .nftPageLayout {
   grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
 }
-/* Вынес для переиспользования. В случае чего можно вынести на уровень tailwind'а, если такие эффекты будут встречаться повторно */
 .lamp {
+  /* Вынес для переиспользования. В случае чего можно вынести на уровень tailwind'а, если такие эффекты будут встречаться повторно */
   width: 488px;
   height: 488px;
   position: absolute;
