@@ -69,11 +69,13 @@
               class="opacity-[0.48] blur-[100px] absolute inset-0"
               :src="selectedCard.imageUrl"
               alt="Kor Blockchain Badge"
+              @error="handleImageError"
             />
             <img
               class="relative z-10 max-w-full max-h-full h-auto"
               :src="selectedCard.imageUrl"
               alt="Kor Blockchain Badge"
+              @error="handleImageError"
             />
           </div>
           <GrayBtn
@@ -116,4 +118,10 @@ const onCopyUrlHandler = () => {
 const onOpenShopHandler = () => {
   console.log("Go To Shop!");
 };
+
+function handleImageError(evt) {
+  console.log("Error");
+  evt.target.src =
+    "https://img.freepik.com/free-vector/oops-404-error-with-a-broken-robot-concept-illustration_114360-1920.jpg?w=2000";
+}
 </script>

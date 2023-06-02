@@ -6,6 +6,7 @@
         :src="card.imageUrl"
         :alt="`nft image ${card.id}`"
         @click="this.$emit('onCardClick', card.id)"
+        @error="handleImageError"
       />
     </div>
     <div class="flex flex-col gap-1">
@@ -19,4 +20,10 @@
 
 <script setup>
 const { card } = defineProps(["card"]);
+
+function handleImageError(evt) {
+  console.log("Error");
+  evt.target.src =
+    "https://img.freepik.com/free-vector/oops-404-error-with-a-broken-robot-concept-illustration_114360-1920.jpg?w=2000"; 
+}
 </script>
